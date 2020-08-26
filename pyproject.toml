@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "nlcli"
+version = "0.1.0"
+description = ""
+authors = ["João Rafael <joaoraf@me.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+fann2 = "==1.0.7"
+padatious = "*"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0a5"]
+build-backend = "poetry.core.masonry.api"
