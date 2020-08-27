@@ -1,7 +1,6 @@
 # nlcli
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-
-badge.svg)](https://github.com/joaorafaelm/nlcli/blob/master/readme.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/joaorafaelm/nlcli/blob/master/readme.ipynb)
 
 Nlcli is a python package that offers a natural language interface for your
 programs. It is primarly focused on command line interaction, but it can be used
@@ -13,8 +12,7 @@ and [libfann/fann](https://github.com/libfann/fann).
 
 # Getting started
 
-*You can run this tutorial interactively on [google
-colab]((https://github.com/joaorafaelm/nlcli/blob/master/readme.ipynb).*
+*You can run this tutorial interactively on [google colab](https://github.com/joaorafaelm/nlcli/blob/master/readme.ipynb).*
 
 ### Instalation
 
@@ -58,16 +56,26 @@ Call `nlcli.interact` to parse the query and call the function intent
 automatically:
 
 ```python
-nlcli.interact("search for brazil on google", debug=True);
+>>> nlcli.interact("search for brazil on google", debug=True)
 ```
+>{'name': 'search', 'sent': ['search', 'for', 'brazil', 'on', 'google'], 'matches': {'query': 'brazil', 'engine': 'google'}, 'conf': 1.0}
+>
+>query: brazil, engine: google
+
 
 ```python
-nlcli.interact("hi", debug=True);
+>>> nlcli.interact("hi", debug=True)
 ```
+>{'name': 'hi', 'sent': ['hi'], 'matches': {}, 'conf': 1.0}
+>
+>hi
 
 ```python
-nlcli.interact("hi, my name is joao", debug=True);
+nlcli.interact("hi, my name is joao", debug=True)
 ```
+>{'name': 'hi', 'sent': ['hi', ',', 'my', 'name', 'is', 'joao'], 'matches': {'name': 'joao'}, 'conf': 1.0}
+>
+>hi joao
 
 By default, nlcli comes with two builtin commands: `help` and `exit`. When nlcli
 fails to match a query with an intent, `help` command will be automatically
@@ -75,15 +83,35 @@ called, you can change the default command by passing `default=True` to the
 desired `@nlcli.cmd` decorator.
 
 ```python
-nlcli.interact("help", debug=True);
+nlcli.interact("help", debug=True)
 ```
+>{'name': 'help', 'sent': 'help', 'matches': {}, 'conf': 0.49447914140834637}
+>
+>Heres what I can do:
+>
+>	help - usage: help (|me) with {skill}
+>
+>	bye - usage: Goodbye!
+>
+>	hi - usage: hi
+>
+>	search - usage: search for {query} on {engine}
 
 All custom commands have `help` automatically, if you want `help` on a command,
 simply ask for it:
 
 ```python
-nlcli.interact("help me with search", debug=True);
+nlcli.interact("help me with search", debug=True)
 ```
+>{'name': 'help', 'sent': ['help', 'me', 'with', 'search'], 'matches': {'skill': 'search'}, 'conf': 1.0}
+>
+>here are some examples on how to use search:
+>
+>	search for {query} on {engine}
+>
+>	search {query} on {engine}
+>
+>	search {query} {engine}
 
 # CLI usage:
 
