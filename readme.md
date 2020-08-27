@@ -59,6 +59,9 @@ if __name__ == "__main__":
 ```
 $ python example.py hi my name is joao
 hi joao
+
+$ python example.py search python on bing
+query: python, engine: bing
 ```
 
 ### Python api
