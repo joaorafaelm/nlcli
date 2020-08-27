@@ -1,22 +1,14 @@
 import nlcli
 
 
-@nlcli.cmd([
-    'Hi there!', 
-    'Hello.',
-    "Hi",
-    'Hi im {name}', 
-    'Hi my name is {name}',
-])
-def hello(name=''):
+@nlcli.cmd(["hi", "Hi my name is {name}"])
+def hello(name=""):
     return f"hi {name}"
 
-@nlcli.cmd([
-    'search for {query} on {engine}',
-    'search {query} on {engine}',
-    'search {query} {engine}',
-    'search (--query|-q)={query} (--engine|e)={engine}'
-])
+
+@nlcli.cmd(
+    ["search for {query} on {engine}", "search {query} on {engine}", "search {query} {engine}",]
+)
 def search(query, engine="google"):
     return f"query: {query}, engine: {engine}"
 
