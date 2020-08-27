@@ -26,19 +26,19 @@ required in order to install nlcli.
 
 To install the libs on linux, run the following command:
 
-```{.python .input  n=1}
+```python
 !sudo apt-get -qq install libfann-dev swig
 ```
 
 Install nlcli using [pip](https://pip.pypa.io/en/stable/quickstart/):
 
-```{.python .input  n=2}
+```python
 !pip install -q nlcli
 ```
 
 ## Usage example
 
-```{.python .input  n=3}
+```python
 import nlcli
 
 
@@ -57,46 +57,16 @@ def search(query, engine="google"):
 Call `nlcli.interact` to parse the query and call the function intent
 automatically:
 
-```{.python .input  n=4}
+```python
 nlcli.interact("search for brazil on google", debug=True);
 ```
 
-```{.json .output n=4}
-[
- {
-  "name": "stdout",
-  "output_type": "stream",
-  "text": "{'name': 'search', 'sent': ['search', 'for', 'brazil', 'on', 'google'], 'matches': {'query': 'brazil', 'engine': 'google'}, 'conf': 1.0}\nquery: brazil, engine: google\n"
- }
-]
-```
-
-```{.python .input  n=5}
+```python
 nlcli.interact("hi", debug=True);
 ```
 
-```{.json .output n=5}
-[
- {
-  "name": "stdout",
-  "output_type": "stream",
-  "text": "{'name': 'hi', 'sent': ['hi'], 'matches': {}, 'conf': 1.0}\nhi \n"
- }
-]
-```
-
-```{.python .input  n=6}
+```python
 nlcli.interact("hi, my name is joao", debug=True);
-```
-
-```{.json .output n=6}
-[
- {
-  "name": "stdout",
-  "output_type": "stream",
-  "text": "{'name': 'hi', 'sent': ['hi', ',', 'my', 'name', 'is', 'joao'], 'matches': {'name': 'joao'}, 'conf': 1.0}\nhi joao\n"
- }
-]
 ```
 
 By default, nlcli comes with two builtin commands: `help` and `exit`. When nlcli
@@ -104,44 +74,24 @@ fails to match a query with an intent, `help` command will be automatically
 called, you can change the default command by passing `default=True` to the
 desired `@nlcli.cmd` decorator.
 
-```{.python .input  n=7}
+```python
 nlcli.interact("help", debug=True);
-```
-
-```{.json .output n=7}
-[
- {
-  "name": "stdout",
-  "output_type": "stream",
-  "text": "{'name': 'help', 'sent': 'help', 'matches': {}, 'conf': 0.49447914140834637}\nHeres what I can do:\n\thelp - usage: help (|me) with {skill}\n\tbye - usage: Goodbye!\n\thi - usage: hi\n\tsearch - usage: search for {query} on {engine}\n"
- }
-]
 ```
 
 All custom commands have `help` automatically, if you want `help` on a command,
 simply ask for it:
 
-```{.python .input  n=8}
+```python
 nlcli.interact("help me with search", debug=True);
-```
-
-```{.json .output n=8}
-[
- {
-  "name": "stdout",
-  "output_type": "stream",
-  "text": "{'name': 'help', 'sent': ['help', 'me', 'with', 'search'], 'matches': {'skill': 'search'}, 'conf': 1.0}\nhere are some examples on how to use search:\n\tsearch for {query} on {engine}\n\tsearch {query} on {engine}\n\tsearch {query} {engine}\n"
- }
-]
 ```
 
 # CLI usage:
 
-```{.python .input}
+```python
 !git clone -q https://github.com/joaorafaelm/nlcli.git && cd nlcli
 ```
 
-```{.python .input}
+```python
 !python -m examples.getting_started hi my name is joao
 ```
 
