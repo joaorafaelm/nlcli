@@ -1,5 +1,6 @@
 # nlcli
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/joaorafaelm/nlcli)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]( https://colab.research.google.com/github/joaorafaelm/nlcli/blob/master/readme.ipynb)
 
 Nlcli is a python package that offers a natural language interface for your
