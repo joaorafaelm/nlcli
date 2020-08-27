@@ -34,7 +34,7 @@ Install nlcli using [pip](https://pip.pypa.io/en/stable/quickstart/):
 !pip install -q nlcli
 ```
 
-## Usage example
+### Usage example
 
 ```python
 import nlcli
@@ -113,7 +113,7 @@ simply ask for it:
 >
 >	search {query} {engine}
 
-# CLI usage:
+### CLI usage:
 
 ```python
 !git clone -q https://github.com/joaorafaelm/nlcli.git && cd nlcli
@@ -123,7 +123,7 @@ simply ask for it:
 !python -m examples.getting_started hi my name is joao
 ```
 
-# TODO
+### TODO
 - Implement data augmentation lib in order to generate more samples, e.g
 commands with typos, grammar errors, wrong spelling, etc.
 https://github.com/makcedward/nlpaug
