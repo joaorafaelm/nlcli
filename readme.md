@@ -71,7 +71,7 @@ automatically:
 >hi
 
 ```python
-nlcli.interact("hi, my name is joao", debug=True)
+>>> nlcli.interact("hi, my name is joao", debug=True)
 ```
 >{'name': 'hi', 'sent': ['hi', ',', 'my', 'name', 'is', 'joao'], 'matches': {'name': 'joao'}, 'conf': 1.0}
 >
@@ -83,7 +83,7 @@ called, you can change the default command by passing `default=True` to the
 desired `@nlcli.cmd` decorator.
 
 ```python
-nlcli.interact("help", debug=True)
+>>> nlcli.interact("help", debug=True)
 ```
 >{'name': 'help', 'sent': 'help', 'matches': {}, 'conf': 0.49447914140834637}
 >
@@ -101,7 +101,7 @@ All custom commands have `help` automatically, if you want `help` on a command,
 simply ask for it:
 
 ```python
-nlcli.interact("help me with search", debug=True)
+>>> nlcli.interact("help me with search", debug=True)
 ```
 >{'name': 'help', 'sent': ['help', 'me', 'with', 'search'], 'matches': {'skill': 'search'}, 'conf': 1.0}
 >
