@@ -61,6 +61,8 @@ $ python example.py hi my name is joao
 hi joao
 ```
 
+### Python api
+
 Call `nlcli.interact` to parse the query and call the function intent
 automatically:
 
