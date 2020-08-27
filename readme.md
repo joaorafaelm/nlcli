@@ -1,6 +1,6 @@
 # nlcli
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/joaorafaelm/nlcli/blob/master/readme.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]( https://colab.research.google.com/github/joaorafaelm/nlcli/blob/master/readme.ipynb)
 
 Nlcli is a python package that offers a natural language interface for your
 programs. It is primarly focused on command line interaction, but it can be used
@@ -12,7 +12,7 @@ and [libfann/fann](https://github.com/libfann/fann).
 
 # Getting started
 
-*You can run this tutorial interactively on [google colab](https://github.com/joaorafaelm/nlcli/blob/master/readme.ipynb).*
+*You can run this tutorial interactively on [google colab](https://colab.research.google.com/github/joaorafaelm/nlcli/blob/master/readme.ipynb).*
 
 ### Instalation
 
