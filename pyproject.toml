@@ -6,7 +6,7 @@ authors = ["João Rafael <joaoraf@me.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3"
+python = "^3.6.5"
 fann2 = "==1.0.7"
 padatious = "*"
 
@@ -16,6 +16,7 @@ pre-commit = "^2.7.1"
 pytest = "^6.0.1"
 pytest-cov = "^2.10.1"
 flake8 = "^3.8.3"
+notedown = "^1.5.1"
 
 [tool.black]
 line-length = 110

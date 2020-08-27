@@ -24,3 +24,6 @@ lint: # lint all files
 
 test: # run tests
 	$(ENV) py.test
+
+readme: # generate readme md from ipynb
+	$(ENV) notedown readme.ipynb --to markdown --strip > readme.md
