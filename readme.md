@@ -50,6 +50,15 @@ def hi(name=""):
 )
 def search(query, engine="google"):
     return f"query: {query}, engine: {engine}"
+
+
+if __name__ == "__main__":
+    nlcli.interact()
+```
+
+```
+$ python example.py hi my name is joao
+hi joao
 ```
 
 Call `nlcli.interact` to parse the query and call the function intent
