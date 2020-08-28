@@ -15,7 +15,7 @@ and [libfann/fann](https://github.com/libfann/fann).
 
 *You can run this tutorial interactively on [google colab](https://colab.research.google.com/github/joaorafaelm/nlcli/blob/master/readme.ipynb).*
 
-### Instalation
+### Installation 
 
 Both https://github.com/libfann/fann and https://github.com/swig/swig are
 required in order to install nlcli.
