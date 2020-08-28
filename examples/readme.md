@@ -1,4 +1,4 @@
-### setup & install
+## setup & install
 ```
 git clone https://github.com/joaorafaelm/nlcli && cd nlcli/examples
 pip install -r extra-requirements.txt
