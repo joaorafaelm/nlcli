@@ -141,7 +141,7 @@ simply ask for it:
 ### TODO
 - Implement data augmentation lib in order to generate more samples, e.g
 commands with typos, grammar errors, wrong spelling, etc.
-https://github.com/makcedward/nlpaug
+https://github.com/makcedward/nlpaug & https://github.com/QData/TextAttack
 - Support intent files so that intent data can be decoupled from code.
 - Response template and i18n.
 - Read from stdin.
