@@ -144,6 +144,5 @@ commands with typos, grammar errors, wrong spelling, etc.
 https://github.com/makcedward/nlpaug
 - Support intent files so that intent data can be decoupled from code.
 - Response template and i18n.
-- Add telegram and flask integration examples.
 - Read from stdin.
 - tests & ci setup.
